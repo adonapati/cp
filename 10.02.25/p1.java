@@ -88,5 +88,6 @@ class Solution {
         String code = sc.next();
         int k = sc.nextInt();
         System.out.println(seqbeauty(code, k));
+        sc.close();
     }
 }

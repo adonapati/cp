@@ -80,23 +80,24 @@ class Solution {
         }
         return root;
     }
-    public static void inorder(treenode root) {
-        if(root==null) return;
-        inorder(root.left);
-        System.out.print(root.data+" ");
-        inorder(root.right);
-    
-    }
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int tree[] = new int[n];
-        for(int i=0;i<n;i++) {
-            tree[i] = sc.nextInt();
+    public void inorder(treenode root) {
+            if(root==null) return;
+            inorder(root.left);
+            System.out.print(root.data+" ");
+            inorder(root.right);
+        
         }
-        sol.root = sol.buildtree(n,tree);
-        sol.inorder(sol.root);
+        public static void main(String[] args) {
+            Solution sol = new Solution();
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            int tree[] = new int[n];
+            for(int i=0;i<n;i++) {
+                tree[i] = sc.nextInt();
+            }
+            sol.root = sol.buildtree(n,tree);
+            sol.inorder(sol.root);
+            sc.close();
         
     }
 }

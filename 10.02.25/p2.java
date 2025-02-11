@@ -107,5 +107,6 @@ class Solution {
             res[i] = sc.nextInt();
         }
         System.out.println(marathon(n, k, m, movie, res));
+        sc.close();
     }
 }
